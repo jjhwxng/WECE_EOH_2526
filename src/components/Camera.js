@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Camera.css";
 
-function Camera() {
+const Camera = () => {
+  const [cameraOn, setCameraOn] = useState(false);
+  const [cameraUrl] = useState("http://localhost:5000/camera"); // placeholder URL
+
+  const toggleCamera = () => setCameraOn(!cameraOn);
+
   return (
-    <div className="page">
-      <h1>Camera Stream</h1>
-      <p>This page will show the live feed.</p>
+    <div className="camera-container">
+      <h1>Camera Module</h1>
+
+      <div className="camera-feed">
+        {cameraOn ? (
+          <img 
+            className="camera-stream"
+            src={cameraUrl}
+            alt="Live Stream Placeholder"
+          />
+        ) : (
+          <div className="camera off">Camera is Off</div>
+        )}
+      </div>
+
+      <button className="toggle-button" onClick={toggleCamera}>
+        {cameraOn ? "Turn Camera Off" : "Turn Camera On"}
+      </button>
     </div>
   );
-}
+};
 
 export default Camera;

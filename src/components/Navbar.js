@@ -5,7 +5,7 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      <h1 className="logo">DeliveryBot</h1>
+      <h1 className="logo">WECE EOH</h1>
       <div className="nav-links">
         <Link to="/">Home</Link>
         <Link to="/camera">Camera</Link>

@@ -6,7 +6,7 @@ function Home() {
     <div className="home">
       <h1>WinnieWheels</h1>
       <p>
-        WECE is <span>forging the future</span> with a smart delivery robot! 
+        Check out <span>WECE's</span> smart delivery robot! 
         Navigate routes, detect obstacles, and connect through a live app.
       </p>
 
